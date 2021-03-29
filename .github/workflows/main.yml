@@ -1,0 +1,16 @@
+name: HTML5 Validator
+on:
+  push:
+  
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2 # Requried will all actions
+    - run: ls -a
+    - name: Checks HTML5
+      uses: Cyb3r-Jak3/html5validator-action@v0.5
+      with:
+        root: .
+        format: json
+        css: true
