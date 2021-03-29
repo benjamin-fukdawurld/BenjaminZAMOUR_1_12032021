@@ -47,6 +47,14 @@ button {
     margin: 0 0.75rem 2.5rem 0;
 }
 
+@media screen and (max-width: 767px) {
+    .ResultCount {
+        font-size: 1.125rem;
+        padding: 2rem 3rem;
+        margin: 0;
+    }
+}
+
 .InfoIcon {
     font-size: 1.25rem !important;
     margin-right: 0.5rem;
@@ -73,6 +81,12 @@ button {
 
 .ActivitySection {
     margin-bottom: 2.5rem;
+}
+
+@media screen and (max-width: 767px) {
+    .ActivitySection {
+        margin: 2rem;
+    }
 }
 
 .Activity {
@@ -120,7 +134,7 @@ button {
         border-top-left-radius: 1rem;
         border-top-right-radius: 1rem;
         width: 100%;
-        height: 20vw;
+        height: 25vw;
         object-fit: cover;
         overflow: hidden;
     }
@@ -210,18 +224,6 @@ button {
     }
 }
 
-@media screen and (max-width: 767px) {
-    .LodgeContainer {
-        display: flex;
-        flex-direction: column;
-    }
-
-    .LodgeSection {
-        order: 1;
-        margin-top: 20px;
-    }
-}
-
 .LodgeSection,
 .FamousLodgeSection {
     background-color: var(--secondary);
@@ -236,6 +238,23 @@ button {
 .FamousLodgeSection {
     padding: 2.5rem 2rem 1rem;
     height: calc(100% - 5rem);
+}
+
+@media screen and (max-width: 767px) {
+    .LodgeContainer {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .LodgeSection {
+        order: 1;
+        margin-top: 20px;
+    }
+
+    .LodgeSection,
+    .FamousLodgeSection {
+        border-radius: 0;
+    }
 }
 
 .LodgeFlexBox {
@@ -310,11 +329,11 @@ button {
 @media screen and (max-width: 767px) {
     .lodge {
         width: 100%;
-        height: 30vw;
+        height: 35vw;
     }
 
     .famousLodge {
-        height: 20vw;
+        height: 30vw;
     }
 }
 
@@ -340,7 +359,7 @@ button {
 
 @media screen and (max-width: 767px) {
     .LodgeImageContainer {
-        height: 20vw;
+        height: 25vw;
     }
 }
 
@@ -371,6 +390,18 @@ button {
     grid-template-rows: 35% 45% 20%;
 }
 
+@media screen and (max-width: 767px) {
+    .FamousLodgeText {
+        grid-template-rows: 50% 30% 20%;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .FamousLodgeText {
+        grid-template-rows: 35% 45% 20%;
+    }
+}
+
 .LodgeName {
     font-size: 1rem;
     margin: 0.1875rem 0 0 0;
@@ -386,11 +417,37 @@ button {
     margin: 0.5em 0 0 0;
 }
 
+@media screen and (max-width: 767px) {
+    .LodgeCostP {
+        font-size: 1.125rem;
+        margin: 0.1rem 0 0;
+    }
+
+    .FamousLodgeName {
+        font-size: 1.25rem;
+    }
+}
+
 .LodgeScore,
 .FamousLodgeScore {
     font-size: 0.75rem;
-    margin: 0.5em 0 0 0;
     bottom: 0.75rem;
+}
+
+.LodgeScore {
+    margin: 0.5em 0 0 0;
+}
+
+@media screen and (max-width: 767px) {
+    .FamousLodgeScore {
+        margin: 0;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .FamousLodgeScore {
+        margin: 0.5em 0 0 0;
+    }
 }
 
 .LodgeCost,
@@ -410,6 +467,12 @@ button {
 header,
 main {
     margin: 0 3.125rem;
+}
+
+@media screen and (max-width: 767px) {
+    main {
+        margin: 0;
+    }
 }
 
 footer {
@@ -492,6 +555,12 @@ footer {
     font-weight: 400;
 }
 
+@media screen and (max-width: 767px) {
+    .Subtitle {
+        font-size: 1.125rem;
+    }
+}
+
 .SearchBarContainer {
     height: 4rem;
 }
@@ -523,6 +592,12 @@ footer {
     padding-left: 1rem;
     font-weight: bold;
     font-size: 1.125rem;
+}
+
+@media screen and (max-width: 767px) {
+    .SearchField {
+        max-width: min(240px, 70%);
+    }
 }
 
 .SearchButton {
@@ -597,6 +672,10 @@ footer {
     .TabContainer {
         grid-row: 2;
         grid-column: 1 / span 12;
+    }
+
+    .TabButton {
+        font-size: 1.25rem;
     }
 
     .TabButton[data-selected] {
