@@ -9,53 +9,708 @@
             href="https://fonts.googleapis.com/css2?family=Raleway:wght@100;300;400;500;600;700;800;900&display=swap"
             rel="stylesheet"
         />
-        <link rel="stylesheet" href="styles/common.css" />
-        <link rel="stylesheet" href="styles/footer.css" />
-        <link rel="stylesheet" href="styles/lodge.css" />
-        <link rel="stylesheet" href="styles/responsive.css" />
+        <link rel="stylesheet" href="style.css" />
         <script src="https://kit.fontawesome.com/64e4df29d8.js" crossorigin="anonymous"></script>
         <script src="https://cdn.jsdelivr.net/npm/ejs@2.0.7/ejs.min.js"></script>
     </head>
     <body>
         <header>
-            <nav class="NavContainer"></nav>
+            <nav class="NavContainer">
+                <div class="Logo">
+                    <picture>
+                        <source srcset="./images/logo/Reservia.svg" type="image/svg+xml" />
+                        <img
+                            src="./images/logo/Reservia@3x.png"
+                            alt="Reservia logo"
+                            title="Accueil"
+                        />
+                    </picture>
+                </div>
+
+                <div class="TabContainer">
+                    <button class="TabButton" data-selected="">Hébergements</button>
+                    <button class="TabButton">Activités</button>
+                </div>
+
+                <button class="SubscribeButton">S'inscrire</button>
+            </nav>
             <section>
-                <div class="TitleSection"></div>
-                <div class="SearchBarContainer"></div>
-                <div class="FilterContainer"></div>
+                <div class="TitleSection">
+                    <h1 class="Title">Trouvez votre hébergement pour des vacances de rêve</h1>
+                    <p class="Subtitle">En plein centre ville ou en pleine nature</p>
+                </div>
+                <div class="SearchBarContainer">
+                    <form class="SearchBar">
+                        <button class="LocationButton">
+                            <i class="fas fa-map-marker-alt" aria-hidden="true"></i>
+                        </button>
+                        <input
+                            class="SearchField"
+                            name="SearchField"
+                            type="search"
+                            value="Marseille, France"
+                        />
+                        <button class="SearchButton">
+                            <i class="fas fa-search SearchIcon" aria-hidden="true"></i>
+                            <span class="SearchButtonText">Rechercher</span>
+                        </button>
+                    </form>
+                </div>
+                <div class="FilterContainer">
+                    <p class="FilterListLabel">Filtres</p>
+                    <div class="FilterList">
+                        <p class="Filter">
+                            <i class="FilterIcon fas fa-money-bill-wave" aria-hidden="true"></i>
+                            Économique
+                        </p>
+                        <p class="Filter">
+                            <i class="FilterIcon fas fa-child" aria-hidden="true"></i>
+                            Familial
+                        </p>
+                        <p class="Filter">
+                            <i class="FilterIcon fas fa-heart" aria-hidden="true"></i>
+                            Romantique
+                        </p>
+                        <p class="Filter">
+                            <i class="FilterIcon fas fa-dog" aria-hidden="true"></i>
+                            Animaux autorisés
+                        </p>
+                    </div>
+                </div>
             </section>
         </header>
         <main>
+            <div>
+                <p class="ResultCount">
+                    <i class="InfoIcon fas fa-info-circle text-blue" aria-hidden="true"></i>
+                    Plus de 500 logements sont disponibles dans cette ville
+                </p>
+            </div>
             <div class="LodgeContainer">
                 <section class="LodgeSection">
                     <h2 class="LodgeListTitle">Hébergements à Marseille</h2>
-                    <div class="LodgeFlexBox"></div>
+                    <div class="LodgeFlexBox">
+                        <article class="lodge">
+                            <a href="#" class="LodgeImageContainer">
+                                <picture>
+                                    <source
+                                        srcset="
+                                            images/hebergements/1_xlarge/marcus-loke-WQJvWU_HZFo-unsplash.jpg
+                                        "
+                                        media="(min-width: 1200px)"
+                                    />
+                                    <source
+                                        srcset="
+                                            images/hebergements/2_large/marcus-loke-WQJvWU_HZFo-unsplash.jpg
+                                        "
+                                        media="(min-width: 992px)"
+                                    />
+                                    <source
+                                        srcset="
+                                            images/hebergements/3_medium/marcus-loke-WQJvWU_HZFo-unsplash.jpg
+                                        "
+                                        media="(min-width: 768px)"
+                                    />
+                                    <img
+                                        src="images/hebergements/4_small/marcus-loke-WQJvWU_HZFo-unsplash.jpg"
+                                        alt="Auberge la Cannebière"
+                                        class="LodgeImage"
+                                    />
+                                </picture>
+                            </a>
+
+                            <div class="LodgeText">
+                                <h2 class="LodgeName">Auberge la Cannebière</h2>
+                                <p class="LodgeCostP">
+                                    Nuit à partir de <span class="LodgeCost">25€</span>
+                                </p>
+
+                                <p class="LodgeScore">
+                                    <i class="fas fa-star text-blue" aria-hidden="true"></i
+                                    ><i class="fas fa-star text-blue" aria-hidden="true"></i
+                                    ><i class="fas fa-star text-blue" aria-hidden="true"></i
+                                    ><i class="fas fa-star text-blue" aria-hidden="true"></i
+                                    ><i class="fas fa-star text-grey" aria-hidden="true"></i>
+                                </p>
+                            </div>
+                        </article>
+                        <article class="lodge">
+                            <a href="#" class="LodgeImageContainer">
+                                <picture>
+                                    <source
+                                        srcset="
+                                            images/hebergements/1_xlarge/fred-kleber-gTbaxaVLvsg-unsplash.jpg
+                                        "
+                                        media="(min-width: 1200px)"
+                                    />
+                                    <source
+                                        srcset="
+                                            images/hebergements/2_large/fred-kleber-gTbaxaVLvsg-unsplash.jpg
+                                        "
+                                        media="(min-width: 992px)"
+                                    />
+                                    <source
+                                        srcset="
+                                            images/hebergements/3_medium/fred-kleber-gTbaxaVLvsg-unsplash.jpg
+                                        "
+                                        media="(min-width: 768px)"
+                                    />
+                                    <img
+                                        src="images/hebergements/4_small/fred-kleber-gTbaxaVLvsg-unsplash.jpg"
+                                        alt="Hôtel du port"
+                                        class="LodgeImage"
+                                    />
+                                </picture>
+                            </a>
+
+                            <div class="LodgeText">
+                                <h2 class="LodgeName">Hôtel du port</h2>
+                                <p class="LodgeCostP">
+                                    Nuit à partir de <span class="LodgeCost">52€</span>
+                                </p>
+
+                                <p class="LodgeScore">
+                                    <i class="fas fa-star text-blue" aria-hidden="true"></i
+                                    ><i class="fas fa-star text-blue" aria-hidden="true"></i
+                                    ><i class="fas fa-star text-blue" aria-hidden="true"></i
+                                    ><i class="fas fa-star text-blue" aria-hidden="true"></i
+                                    ><i class="fas fa-star text-blue" aria-hidden="true"></i>
+                                </p>
+                            </div>
+                        </article>
+                        <article class="lodge">
+                            <a href="#" class="LodgeImageContainer">
+                                <picture>
+                                    <source
+                                        srcset="
+                                            images/hebergements/1_xlarge/reisetopia-B8WIgxA_PFU-unsplash.jpg
+                                        "
+                                        media="(min-width: 1200px)"
+                                    />
+                                    <source
+                                        srcset="
+                                            images/hebergements/2_large/reisetopia-B8WIgxA_PFU-unsplash.jpg
+                                        "
+                                        media="(min-width: 992px)"
+                                    />
+                                    <source
+                                        srcset="
+                                            images/hebergements/3_medium/reisetopia-B8WIgxA_PFU-unsplash.jpg
+                                        "
+                                        media="(min-width: 768px)"
+                                    />
+                                    <img
+                                        src="images/hebergements/4_small/reisetopia-B8WIgxA_PFU-unsplash.jpg"
+                                        alt="Hôtel les mouettes"
+                                        class="LodgeImage"
+                                    />
+                                </picture>
+                            </a>
+
+                            <div class="LodgeText">
+                                <h2 class="LodgeName">Hôtel les mouettes</h2>
+                                <p class="LodgeCostP">
+                                    Nuit à partir de <span class="LodgeCost">76€</span>
+                                </p>
+
+                                <p class="LodgeScore">
+                                    <i class="fas fa-star text-blue" aria-hidden="true"></i
+                                    ><i class="fas fa-star text-blue" aria-hidden="true"></i
+                                    ><i class="fas fa-star text-blue" aria-hidden="true"></i
+                                    ><i class="fas fa-star text-blue" aria-hidden="true"></i
+                                    ><i class="fas fa-star text-grey" aria-hidden="true"></i>
+                                </p>
+                            </div>
+                        </article>
+                        <article class="lodge">
+                            <a href="#" class="LodgeImageContainer">
+                                <picture>
+                                    <source
+                                        srcset="
+                                            images/hebergements/1_xlarge/annie-spratt-Eg1qcIitAuA-unsplash.jpg
+                                        "
+                                        media="(min-width: 1200px)"
+                                    />
+                                    <source
+                                        srcset="
+                                            images/hebergements/2_large/annie-spratt-Eg1qcIitAuA-unsplash.jpg
+                                        "
+                                        media="(min-width: 992px)"
+                                    />
+                                    <source
+                                        srcset="
+                                            images/hebergements/3_medium/annie-spratt-Eg1qcIitAuA-unsplash.jpg
+                                        "
+                                        media="(min-width: 768px)"
+                                    />
+                                    <img
+                                        src="images/hebergements/4_small/annie-spratt-Eg1qcIitAuA-unsplash.jpg"
+                                        alt="Hôtel de la mer"
+                                        class="LodgeImage"
+                                    />
+                                </picture>
+                            </a>
+
+                            <div class="LodgeText">
+                                <h2 class="LodgeName">Hôtel de la mer</h2>
+                                <p class="LodgeCostP">
+                                    Nuit à partir de <span class="LodgeCost">25€</span>
+                                </p>
+
+                                <p class="LodgeScore">
+                                    <i class="fas fa-star text-blue" aria-hidden="true"></i
+                                    ><i class="fas fa-star text-blue" aria-hidden="true"></i
+                                    ><i class="fas fa-star text-blue" aria-hidden="true"></i
+                                    ><i class="fas fa-star text-grey" aria-hidden="true"></i
+                                    ><i class="fas fa-star text-grey" aria-hidden="true"></i>
+                                </p>
+                            </div>
+                        </article>
+                        <article class="lodge">
+                            <a href="#" class="LodgeImageContainer">
+                                <picture>
+                                    <source
+                                        srcset="
+                                            images/hebergements/1_xlarge/nicate-lee-kT-ZyaiwBe0-unsplash.jpg
+                                        "
+                                        media="(min-width: 1200px)"
+                                    />
+                                    <source
+                                        srcset="
+                                            images/hebergements/2_large/nicate-lee-kT-ZyaiwBe0-unsplash.jpg
+                                        "
+                                        media="(min-width: 992px)"
+                                    />
+                                    <source
+                                        srcset="
+                                            images/hebergements/3_medium/nicate-lee-kT-ZyaiwBe0-unsplash.jpg
+                                        "
+                                        media="(min-width: 768px)"
+                                    />
+                                    <img
+                                        src="images/hebergements/4_small/nicate-lee-kT-ZyaiwBe0-unsplash.jpg"
+                                        alt="Auberge le Panier"
+                                        class="LodgeImage"
+                                    />
+                                </picture>
+                            </a>
+
+                            <div class="LodgeText">
+                                <h2 class="LodgeName">Auberge le Panier</h2>
+                                <p class="LodgeCostP">
+                                    Nuit à partir de <span class="LodgeCost">25€</span>
+                                </p>
+
+                                <p class="LodgeScore">
+                                    <i class="fas fa-star text-blue" aria-hidden="true"></i
+                                    ><i class="fas fa-star text-blue" aria-hidden="true"></i
+                                    ><i class="fas fa-star text-blue" aria-hidden="true"></i
+                                    ><i class="fas fa-star text-blue" aria-hidden="true"></i
+                                    ><i class="fas fa-star text-grey" aria-hidden="true"></i>
+                                </p>
+                            </div>
+                        </article>
+                        <article class="lodge">
+                            <a href="#" class="LodgeImageContainer">
+                                <picture>
+                                    <source
+                                        srcset="
+                                            images/hebergements/1_xlarge/febrian-zakaria-M6S1WvfW68A-unsplash.jpg
+                                        "
+                                        media="(min-width: 1200px)"
+                                    />
+                                    <source
+                                        srcset="
+                                            images/hebergements/2_large/febrian-zakaria-M6S1WvfW68A-unsplash.jpg
+                                        "
+                                        media="(min-width: 992px)"
+                                    />
+                                    <source
+                                        srcset="
+                                            images/hebergements/3_medium/febrian-zakaria-M6S1WvfW68A-unsplash.jpg
+                                        "
+                                        media="(min-width: 768px)"
+                                    />
+                                    <img
+                                        src="images/hebergements/4_small/febrian-zakaria-M6S1WvfW68A-unsplash.jpg"
+                                        alt="Hôtel chez Amina"
+                                        class="LodgeImage"
+                                    />
+                                </picture>
+                            </a>
+
+                            <div class="LodgeText">
+                                <h2 class="LodgeName">Hôtel chez Amina</h2>
+                                <p class="LodgeCostP">
+                                    Nuit à partir de <span class="LodgeCost">25€</span>
+                                </p>
+
+                                <p class="LodgeScore">
+                                    <i class="fas fa-star text-blue" aria-hidden="true"></i
+                                    ><i class="fas fa-star text-blue" aria-hidden="true"></i
+                                    ><i class="fas fa-star text-blue" aria-hidden="true"></i
+                                    ><i class="fas fa-star text-blue" aria-hidden="true"></i
+                                    ><i class="fas fa-star text-blue" aria-hidden="true"></i>
+                                </p>
+                            </div>
+                        </article>
+                    </div>
                     <p class="LodgeMore"><a href="#">Afficher plus</a></p>
                 </section>
                 <aside class="FamousLodgeAside">
                     <section class="FamousLodgeSection">
                         <div class="FamousLodgeListTitleContainer">
                             <h2 class="FamousLodgeListTitle">Les plus populaires</h2>
-                            <i class="fas fa-chart-line"></i>
+                            <i class="fas fa-chart-line" aria-hidden="true"></i>
                         </div>
-                        <div class="FamousLodgeFlexBox"></div>
+                        <div class="FamousLodgeFlexBox">
+                            <article class="famousLodge">
+                                <a href="#" class="FamousLodgeImageContainer">
+                                    <picture>
+                                        <source
+                                            srcset="
+                                                images/hebergements/1_xlarge/emile-guillemot-Bj_rcSC5XfE-unsplash.jpg
+                                            "
+                                            media="(min-width: 1200px)"
+                                        />
+                                        <source
+                                            srcset="
+                                                images/hebergements/2_large/emile-guillemot-Bj_rcSC5XfE-unsplash.jpg
+                                            "
+                                            media="(min-width: 992px)"
+                                        />
+                                        <source
+                                            srcset="
+                                                images/hebergements/3_medium/emile-guillemot-Bj_rcSC5XfE-unsplash.jpg
+                                            "
+                                            media="(min-width: 768px)"
+                                        />
+                                        <img
+                                            src="images/hebergements/4_small/emile-guillemot-Bj_rcSC5XfE-unsplash.jpg"
+                                            alt="Hôtel le soleil du matin"
+                                            class="FamousLodgeImage"
+                                        />
+                                    </picture>
+                                </a>
+
+                                <div class="FamousLodgeText">
+                                    <h2 class="FamousLodgeName">Hôtel le soleil du matin</h2>
+                                    <p class="LodgeCostP">
+                                        Nuit à partir de <span class="LodgeCost">128€</span>
+                                    </p>
+
+                                    <p class="LodgeScore">
+                                        <i class="fas fa-star text-blue" aria-hidden="true"></i
+                                        ><i class="fas fa-star text-blue" aria-hidden="true"></i
+                                        ><i class="fas fa-star text-blue" aria-hidden="true"></i
+                                        ><i class="fas fa-star text-blue" aria-hidden="true"></i
+                                        ><i class="fas fa-star text-blue" aria-hidden="true"></i>
+                                    </p>
+                                </div>
+                            </article>
+                            <article class="famousLodge">
+                                <a href="#" class="FamousLodgeImageContainer">
+                                    <picture>
+                                        <source
+                                            srcset="
+                                                images/hebergements/1_xlarge/aw-creative-VGs8z60yT2c-unsplash.jpg
+                                            "
+                                            media="(min-width: 1200px)"
+                                        />
+                                        <source
+                                            srcset="
+                                                images/hebergements/2_large/aw-creative-VGs8z60yT2c-unsplash.jpg
+                                            "
+                                            media="(min-width: 992px)"
+                                        />
+                                        <source
+                                            srcset="
+                                                images/hebergements/3_medium/aw-creative-VGs8z60yT2c-unsplash.jpg
+                                            "
+                                            media="(min-width: 768px)"
+                                        />
+                                        <img
+                                            src="images/hebergements/4_small/aw-creative-VGs8z60yT2c-unsplash.jpg"
+                                            alt="Au cœur de l'eau Chambres d'hôtes"
+                                            class="FamousLodgeImage"
+                                        />
+                                    </picture>
+                                </a>
+
+                                <div class="FamousLodgeText">
+                                    <h2 class="FamousLodgeName">
+                                        Au cœur de l'eau Chambres d'hôtes
+                                    </h2>
+                                    <p class="LodgeCostP">
+                                        Nuit à partir de <span class="LodgeCost">71€</span>
+                                    </p>
+
+                                    <p class="LodgeScore">
+                                        <i class="fas fa-star text-blue" aria-hidden="true"></i
+                                        ><i class="fas fa-star text-blue" aria-hidden="true"></i
+                                        ><i class="fas fa-star text-blue" aria-hidden="true"></i
+                                        ><i class="fas fa-star text-blue" aria-hidden="true"></i
+                                        ><i class="fas fa-star text-grey" aria-hidden="true"></i>
+                                    </p>
+                                </div>
+                            </article>
+                            <article class="famousLodge">
+                                <a href="#" class="FamousLodgeImageContainer">
+                                    <picture>
+                                        <source
+                                            srcset="
+                                                images/hebergements/1_xlarge/febrian-zakaria-sjvU0THccQA-unsplash.jpg
+                                            "
+                                            media="(min-width: 1200px)"
+                                        />
+                                        <source
+                                            srcset="
+                                                images/hebergements/2_large/febrian-zakaria-sjvU0THccQA-unsplash.jpg
+                                            "
+                                            media="(min-width: 992px)"
+                                        />
+                                        <source
+                                            srcset="
+                                                images/hebergements/3_medium/febrian-zakaria-sjvU0THccQA-unsplash.jpg
+                                            "
+                                            media="(min-width: 768px)"
+                                        />
+                                        <img
+                                            src="images/hebergements/4_small/febrian-zakaria-sjvU0THccQA-unsplash.jpg"
+                                            alt="Hôtel Tout bleu et Blanc"
+                                            class="FamousLodgeImage"
+                                        />
+                                    </picture>
+                                </a>
+
+                                <div class="FamousLodgeText">
+                                    <h2 class="FamousLodgeName">Hôtel Tout bleu et Blanc</h2>
+                                    <p class="LodgeCostP">
+                                        Nuit à partir de <span class="LodgeCost">68€</span>
+                                    </p>
+
+                                    <p class="LodgeScore">
+                                        <i class="fas fa-star text-blue" aria-hidden="true"></i
+                                        ><i class="fas fa-star text-blue" aria-hidden="true"></i
+                                        ><i class="fas fa-star text-blue" aria-hidden="true"></i
+                                        ><i class="fas fa-star text-blue" aria-hidden="true"></i
+                                        ><i class="fas fa-star text-grey" aria-hidden="true"></i>
+                                    </p>
+                                </div>
+                            </article>
+                        </div>
                     </section>
                 </aside>
             </div>
             <section class="ActivitySection">
                 <h2>Activités à Marseille</h2>
-                <div class="ActivityGrid"></div>
+                <div class="ActivityGrid">
+                    <article class="Activity" data-index="0">
+                        <a href="#" class="ActivityImageContainer">
+                            <picture>
+                                <source
+                                    srcset="
+                                        images/activites/1_xlarge/reno-laithienne-QUgJhdY5Fyk-unsplash.jpg
+                                    "
+                                    media="(min-width: 1200px)"
+                                />
+                                <source
+                                    srcset="
+                                        images/activites/2_large/reno-laithienne-QUgJhdY5Fyk-unsplash.jpg
+                                    "
+                                    media="(min-width: 992px)"
+                                />
+                                <source
+                                    srcset="
+                                        images/activites/3_medium/reno-laithienne-QUgJhdY5Fyk-unsplash.jpg
+                                    "
+                                    media="(min-width: 768px)"
+                                />
+                                <img
+                                    src="images/activites/4_small/reno-laithienne-QUgJhdY5Fyk-unsplash.jpg"
+                                    alt="Vieux Port"
+                                    class="ActivityImage"
+                                />
+                            </picture>
+                        </a>
+                        <h2 class="ActivityName">Vieux Port</h2>
+                    </article>
+                    <article class="Activity" data-index="1">
+                        <a href="#" class="ActivityImageContainer">
+                            <picture>
+                                <source
+                                    srcset="
+                                        images/activites/1_xlarge/paul-hermann-QFTrLdQIRhI-unsplash.jpg
+                                    "
+                                    media="(min-width: 1200px)"
+                                />
+                                <source
+                                    srcset="
+                                        images/activites/2_large/paul-hermann-QFTrLdQIRhI-unsplash.jpg
+                                    "
+                                    media="(min-width: 992px)"
+                                />
+                                <source
+                                    srcset="
+                                        images/activites/3_medium/paul-hermann-QFTrLdQIRhI-unsplash.jpg
+                                    "
+                                    media="(min-width: 768px)"
+                                />
+                                <img
+                                    src="images/activites/4_small/paul-hermann-QFTrLdQIRhI-unsplash.jpg"
+                                    alt="Fort de Pomègues"
+                                    class="ActivityImage"
+                                />
+                            </picture>
+                        </a>
+                        <h2 class="ActivityName">Fort de Pomègues</h2>
+                    </article>
+                    <article class="Activity" data-index="2">
+                        <a href="#" class="ActivityImageContainer">
+                            <picture>
+                                <source
+                                    srcset="
+                                        images/activites/1_xlarge/kevin-hikari-rV_Qd1l-VXg-unsplash.jpg
+                                    "
+                                    media="(min-width: 1200px)"
+                                />
+                                <source
+                                    srcset="
+                                        images/activites/2_large/kevin-hikari-rV_Qd1l-VXg-unsplash.jpg
+                                    "
+                                    media="(min-width: 992px)"
+                                />
+                                <source
+                                    srcset="
+                                        images/activites/3_medium/kevin-hikari-rV_Qd1l-VXg-unsplash.jpg
+                                    "
+                                    media="(min-width: 768px)"
+                                />
+                                <img
+                                    src="images/activites/4_small/kevin-hikari-rV_Qd1l-VXg-unsplash.jpg"
+                                    alt="Île du Frioul"
+                                    class="ActivityImage"
+                                />
+                            </picture>
+                        </a>
+                        <h2 class="ActivityName">Île du Frioul</h2>
+                    </article>
+                    <article class="Activity" data-index="3">
+                        <a href="#" class="ActivityImageContainer">
+                            <picture>
+                                <source
+                                    srcset="
+                                        images/activites/1_xlarge/kilyan-sockalingum-NR8-cBCN3aI-unsplash.jpg
+                                    "
+                                    media="(min-width: 1200px)"
+                                />
+                                <source
+                                    srcset="
+                                        images/activites/2_large/kilyan-sockalingum-NR8-cBCN3aI-unsplash.jpg
+                                    "
+                                    media="(min-width: 992px)"
+                                />
+                                <source
+                                    srcset="
+                                        images/activites/3_medium/kilyan-sockalingum-NR8-cBCN3aI-unsplash.jpg
+                                    "
+                                    media="(min-width: 768px)"
+                                />
+                                <img
+                                    src="images/activites/4_small/kilyan-sockalingum-NR8-cBCN3aI-unsplash.jpg"
+                                    alt="Parc National des Calanques"
+                                    class="ActivityImage"
+                                />
+                            </picture>
+                        </a>
+                        <h2 class="ActivityName">Parc National des Calanques</h2>
+                    </article>
+                    <article class="Activity" data-index="4">
+                        <a href="#" class="ActivityImageContainer">
+                            <picture>
+                                <source
+                                    srcset="
+                                        images/activites/1_xlarge/florian-wehde-xW9e8gdotxI-unsplash.jpg
+                                    "
+                                    media="(min-width: 1200px)"
+                                />
+                                <source
+                                    srcset="
+                                        images/activites/2_large/florian-wehde-xW9e8gdotxI-unsplash.jpg
+                                    "
+                                    media="(min-width: 992px)"
+                                />
+                                <source
+                                    srcset="
+                                        images/activites/3_medium/florian-wehde-xW9e8gdotxI-unsplash.jpg
+                                    "
+                                    media="(min-width: 768px)"
+                                />
+                                <img
+                                    src="images/activites/4_small/florian-wehde-xW9e8gdotxI-unsplash.jpg"
+                                    alt="Notre-Dame-de-la-Garde"
+                                    class="ActivityImage"
+                                />
+                            </picture>
+                        </a>
+                        <h2 class="ActivityName">Notre-Dame-de-la-Garde</h2>
+                    </article>
+                    <article class="Activity" data-index="5">
+                        <a href="#" class="ActivityImageContainer">
+                            <picture>
+                                <source
+                                    srcset="
+                                        images/activites/1_xlarge/lena-paulin-wH2-EJoDcV0-unsplash.jpg
+                                    "
+                                    media="(min-width: 1200px)"
+                                />
+                                <source
+                                    srcset="
+                                        images/activites/2_large/lena-paulin-wH2-EJoDcV0-unsplash.jpg
+                                    "
+                                    media="(min-width: 992px)"
+                                />
+                                <source
+                                    srcset="
+                                        images/activites/3_medium/lena-paulin-wH2-EJoDcV0-unsplash.jpg
+                                    "
+                                    media="(min-width: 768px)"
+                                />
+                                <img
+                                    src="images/activites/4_small/lena-paulin-wH2-EJoDcV0-unsplash.jpg"
+                                    alt="Parc Longchamp"
+                                    class="ActivityImage"
+                                />
+                            </picture>
+                        </a>
+                        <h2 class="ActivityName">Parc Longchamp</h2>
+                    </article>
+                </div>
             </section>
         </main>
-        <footer class="Footer"></footer>
-        <script src="scripts/nav-template.js"></script>
-        <script src="scripts/title-template.js"></script>
-        <script src="scripts/searchbar-template.js"></script>
-        <script src="scripts/filter-template.js"></script>
-        <script src="scripts/resultCount-template.js"></script>
-        <script src="scripts/lodge-template.js"></script>
-        <script src="scripts/activity-template.js"></script>
-        <script src="scripts/footer-template.js"></script>
-        <script src="scripts/index.js"></script>
+        <footer class="Footer">
+            <section class="FooterSection">
+                <h3>A propos</h3>
+                <ul class="FooterSectionList">
+                    <li class="FooterSectionItem">Fonctionnement du site</li>
+                    <li class="FooterSectionItem">Conditions générales de vente</li>
+                    <li class="FooterSectionItem">Données et confidentialité</li>
+                </ul>
+            </section>
+            <section class="FooterSection">
+                <h3>Nos hébergements</h3>
+                <ul class="FooterSectionList">
+                    <li class="FooterSectionItem">Charte qualité</li>
+                    <li class="FooterSectionItem">Soumettre votre hôtel</li>
+                </ul>
+            </section>
+            <section class="FooterSection">
+                <h3>Assistance</h3>
+                <ul class="FooterSectionList">
+                    <li class="FooterSectionItem">Centre d'aide</li>
+                    <li class="FooterSectionItem">Nous contacter</li>
+                </ul>
+            </section>
+        </footer>
     </body>
 </html>
