@@ -2,112 +2,63 @@
 <html lang="fr-FR">
     <head>
         <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Reservia - Trouvez votre hébergement pour des vacances de rêve</title>
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway" />
-        <link rel="stylesheet" href="styles/index.css" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Raleway:wght@100;300;400;500;600;700;800;900&display=swap"
+            rel="stylesheet"
+        />
+        <link rel="stylesheet" href="styles/common.css" />
+        <link rel="stylesheet" href="styles/footer.css" />
+        <link rel="stylesheet" href="styles/lodge.css" />
+        <link rel="stylesheet" href="styles/responsive.css" />
         <script src="https://kit.fontawesome.com/64e4df29d8.js" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/ejs@2.0.7/ejs.min.js"></script>
     </head>
     <body>
         <header>
-            <nav class="NavContainer">
-                <div class="logo">
-                    <img
-                        class="logo-image"
-                        src="./images/logo/Reservia.svg"
-                        alt="Reservia logo"
-                        title="Accueil"
-                    />
-                </div>
-                <div class="Tabs text-align-right">
-                    <button class="tab-button text-blue tab-button-selected">Hébergements</button>
-                    <button class="tab-button">Activités</button>
-                </div>
-                <button class="tab-button text-blue text-bold">S'inscrire</button>
-            </nav>
-            <div>
-                <section class="header-title">
-                    <h1 class="header-title">Trouvez votre hébergement pour des vacances de rêve</h1>
-                    <p class="header-subtitle text-small">En plein centre ville ou en pleine nature</p>
-                </div>
-                <form>
-                    <button class="btn">location</button>
-                    <input name="search-field" type="search" />
-                    <button class="btn">search</button>
-                </form>
-                <div>
-                    <p>Filtres</p>
-                    <ul class="container-flex filter-list">
-                        <li>Économique</li>
-                        <li>Familial</li>
-                        <li>Romantique</li>
-                        <li>Animaux autorisés</li>
-                    </ul>
-                </div>
-            </div>
+            <nav class="NavContainer"></nav>
+            <section>
+                <div class="TitleSection"></div>
+                <div class="SearchBarContainer"></div>
+                <div class="FilterContainer"></div>
+            </section>
         </header>
         <main>
-            <i id="starTemplate" class="hidden fas fa-star text-blue"></i>
-            <p>Plus de 500 logements sont disponibles dans cette ville</p>
-            <section>
-                <section id="lodgeList" class="background-grey">
-                    <h2>Hébergements à Marseille</h2>
-                    <article id="lodgeTemplate" class="hidden">
-                        <a href="#"><img class="lodge-image" /></a>
-                        <div>
-                            <p class="lodge-name"></p>
-                            <p>
-                                Nuit à partir de <span class="lodge-cost">25</span>€
-                            </p>
-                            <p class="lodge-score"></p>
-                        </div>
-                    </article>
+            <div class="LodgeContainer">
+                <section class="LodgeSection">
+                    <h2 class="LodgeListTitle">Hébergements à Marseille</h2>
+                    <div class="LodgeFlexBox"></div>
+                    <p class="LodgeMore"><a href="#">Afficher plus</a></p>
                 </section>
-                <aside id="famousLodgeList" class="background-grey">
-                    <h2>Les plus populaires</h2>
-                    <article id="famousLodgeTemplate" class="hidden">
-                        <a href="#"><img class="lodge-image" /></a>
-                        <div>
-                            <p class="lodge-name"></p>
-                            <p>
-                                Nuit à partir de <span class="lodge-cost">25</span>€
-                            </p>
-                            <p class="lodge-score"></p>
+                <aside class="FamousLodgeAside">
+                    <section class="FamousLodgeSection">
+                        <div class="FamousLodgeListTitleContainer">
+                            <h2 class="FamousLodgeListTitle">Les plus populaires</h2>
+                            <i class="fas fa-chart-line"></i>
                         </div>
-                    </article>
+                        <div class="FamousLodgeFlexBox"></div>
+                    </section>
                 </aside>
-            </section>
-            <section id="activityList" class="background-grey">
+            </div>
+            <section class="ActivitySection" class="background-grey">
                 <h2>Activités à Marseille</h2>
-                <article id="activityTemplate" class="hidden">
-                    <a href="#"><img class="activity-image" /></a>
-                    <p class="activity-name"></p>
-                </article>
+                <div class="ActivityGrid"></div>
             </section>
         </main>
-        <footer class="background-grey">
-            <section>
-                <h3>A propos</h3>
-                <ul>
-                    <li>Fonctionnement du site</li>
-                    <li>Conditions générales de vente</li>
-                    <li>Données et confidentialité</li>
-                </ul>
-            </section>
-            <section>
-                <h3>Nos hébergements</h3>
-                <ul>
-                    <li>Charte qualité</li>
-                    <li>Soumettre votre hôtel</li>
-                </ul>
-            </section>
-            <section>
-                <h3>Assistance</h3>
-                <ul>
-                    <li>Centre d'aide</li>
-                    <li>Nous contacter</li>
-                </ul>
-            </section>
-        </footer>
-        <script type="text/javascript" src="index.js"></script>
+        <footer class="Footer"></footer>
+        <script src="scripts/nav-template.js"></script>
+        <script src="scripts/title-template.js"></script>
+        <script src="scripts/searchbar-template.js"></script>
+        <script src="scripts/filter-template.js"></script>
+        <script src="scripts/resultCount-template.js"></script>
+        <script src="scripts/lodge-template.js"></script>
+        <script src="scripts/activity-template.js"></script>
+        <script src="scripts/footer-template.js"></script>
+        <script src="scripts/index.js"></script>
+        <div id="overlay">
+            <img src="docs/Desktop - 1.png" />
+        </div>
     </body>
 </html>

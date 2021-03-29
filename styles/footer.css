@@ -1,0 +1,35 @@
+.Footer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    background-color: var(--secondary);
+}
+
+.FooterSection {
+    padding: 1.875rem 0.25rem;
+    width: 25rem;
+    max-width: 33%;
+    display: inline-block;
+}
+
+@media screen and (max-width: 767px) {
+    .FooterSection {
+        min-width: 80%;
+        padding-bottom: 0;
+    }
+}
+
+.FooterSectionList {
+    padding: 0;
+}
+
+@media screen and (max-width: 767px) {
+    .FooterSectionList {
+        margin-bottom: 0;
+    }
+}
+
+.FooterSectionItem {
+    list-style: none;
+    padding: 0.5rem;
+}
