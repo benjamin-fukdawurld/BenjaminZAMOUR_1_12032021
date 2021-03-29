@@ -1,5 +1,8 @@
 header,
-main,
+main {
+    margin: 0 3.125rem;
+}
+
 footer {
     padding: 0 3.125rem;
 }
