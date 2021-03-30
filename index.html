@@ -28,8 +28,16 @@
                 </div>
 
                 <div class="TabContainer">
-                    <button class="TabButton" data-selected="">Hébergements</button>
-                    <button class="TabButton">Activités</button>
+                    <button
+                        class="TabButton"
+                        onclick="location.href='#LodgeContainer';"
+                        data-selected=""
+                    >
+                        Hébergements
+                    </button>
+                    <button class="TabButton" onclick="location.href='#ActivitySection';">
+                        Activités
+                    </button>
                 </div>
 
                 <button class="SubscribeButton">S'inscrire</button>
@@ -86,12 +94,12 @@
                     Plus de 500 logements sont disponibles dans cette ville
                 </p>
             </div>
-            <div class="LodgeContainer">
+            <div id="LodgeContainer">
                 <section class="LodgeSection">
                     <h2 class="LodgeListTitle">Hébergements à Marseille</h2>
                     <div class="LodgeFlexBox">
                         <article class="lodge">
-                            <a href="#" class="LodgeImageContainer">
+                            <div class="LodgeImageContainer">
                                 <picture>
                                     <source
                                         srcset="
@@ -117,7 +125,7 @@
                                         class="LodgeImage"
                                     />
                                 </picture>
-                            </a>
+                            </div>
 
                             <div class="LodgeText">
                                 <h2 class="LodgeName">Auberge la Cannebière</h2>
@@ -135,7 +143,7 @@
                             </div>
                         </article>
                         <article class="lodge">
-                            <a href="#" class="LodgeImageContainer">
+                            <div class="LodgeImageContainer">
                                 <picture>
                                     <source
                                         srcset="
@@ -161,7 +169,7 @@
                                         class="LodgeImage"
                                     />
                                 </picture>
-                            </a>
+                            </div>
 
                             <div class="LodgeText">
                                 <h2 class="LodgeName">Hôtel du port</h2>
@@ -179,7 +187,7 @@
                             </div>
                         </article>
                         <article class="lodge">
-                            <a href="#" class="LodgeImageContainer">
+                            <div class="LodgeImageContainer">
                                 <picture>
                                     <source
                                         srcset="
@@ -205,7 +213,7 @@
                                         class="LodgeImage"
                                     />
                                 </picture>
-                            </a>
+                            </div>
 
                             <div class="LodgeText">
                                 <h2 class="LodgeName">Hôtel les mouettes</h2>
@@ -223,7 +231,7 @@
                             </div>
                         </article>
                         <article class="lodge">
-                            <a href="#" class="LodgeImageContainer">
+                            <div class="LodgeImageContainer">
                                 <picture>
                                     <source
                                         srcset="
@@ -249,7 +257,7 @@
                                         class="LodgeImage"
                                     />
                                 </picture>
-                            </a>
+                            </div>
 
                             <div class="LodgeText">
                                 <h2 class="LodgeName">Hôtel de la mer</h2>
@@ -267,7 +275,7 @@
                             </div>
                         </article>
                         <article class="lodge">
-                            <a href="#" class="LodgeImageContainer">
+                            <div class="LodgeImageContainer">
                                 <picture>
                                     <source
                                         srcset="
@@ -293,7 +301,7 @@
                                         class="LodgeImage"
                                     />
                                 </picture>
-                            </a>
+                            </div>
 
                             <div class="LodgeText">
                                 <h2 class="LodgeName">Auberge le Panier</h2>
@@ -311,7 +319,7 @@
                             </div>
                         </article>
                         <article class="lodge">
-                            <a href="#" class="LodgeImageContainer">
+                            <div class="LodgeImageContainer">
                                 <picture>
                                     <source
                                         srcset="
@@ -337,7 +345,7 @@
                                         class="LodgeImage"
                                     />
                                 </picture>
-                            </a>
+                            </div>
 
                             <div class="LodgeText">
                                 <h2 class="LodgeName">Hôtel chez Amina</h2>
@@ -365,7 +373,7 @@
                         </div>
                         <div class="FamousLodgeFlexBox">
                             <article class="famousLodge">
-                                <a href="#" class="FamousLodgeImageContainer">
+                                <div class="FamousLodgeImageContainer">
                                     <picture>
                                         <source
                                             srcset="
@@ -391,7 +399,7 @@
                                             class="FamousLodgeImage"
                                         />
                                     </picture>
-                                </a>
+                                </div>
 
                                 <div class="FamousLodgeText">
                                     <h2 class="FamousLodgeName">Hôtel le soleil du matin</h2>
@@ -409,7 +417,7 @@
                                 </div>
                             </article>
                             <article class="famousLodge">
-                                <a href="#" class="FamousLodgeImageContainer">
+                                <div class="FamousLodgeImageContainer">
                                     <picture>
                                         <source
                                             srcset="
@@ -435,7 +443,7 @@
                                             class="FamousLodgeImage"
                                         />
                                     </picture>
-                                </a>
+                                </div>
 
                                 <div class="FamousLodgeText">
                                     <h2 class="FamousLodgeName">
@@ -455,7 +463,7 @@
                                 </div>
                             </article>
                             <article class="famousLodge">
-                                <a href="#" class="FamousLodgeImageContainer">
+                                <div class="FamousLodgeImageContainer">
                                     <picture>
                                         <source
                                             srcset="
@@ -481,7 +489,7 @@
                                             class="FamousLodgeImage"
                                         />
                                     </picture>
-                                </a>
+                                </div>
 
                                 <div class="FamousLodgeText">
                                     <h2 class="FamousLodgeName">Hôtel Tout bleu et Blanc</h2>
@@ -502,11 +510,11 @@
                     </section>
                 </aside>
             </div>
-            <section class="ActivitySection">
+            <section id="ActivitySection">
                 <h2>Activités à Marseille</h2>
                 <div class="ActivityGrid">
                     <article class="Activity" data-index="0">
-                        <a href="#" class="ActivityImageContainer">
+                        <div class="ActivityImageContainer">
                             <picture>
                                 <source
                                     srcset="
@@ -532,11 +540,11 @@
                                     class="ActivityImage"
                                 />
                             </picture>
-                        </a>
+                        </div>
                         <h2 class="ActivityName">Vieux Port</h2>
                     </article>
                     <article class="Activity" data-index="1">
-                        <a href="#" class="ActivityImageContainer">
+                        <div class="ActivityImageContainer">
                             <picture>
                                 <source
                                     srcset="
@@ -562,11 +570,11 @@
                                     class="ActivityImage"
                                 />
                             </picture>
-                        </a>
+                        </div>
                         <h2 class="ActivityName">Fort de Pomègues</h2>
                     </article>
                     <article class="Activity" data-index="2">
-                        <a href="#" class="ActivityImageContainer">
+                        <div class="ActivityImageContainer">
                             <picture>
                                 <source
                                     srcset="
@@ -592,11 +600,11 @@
                                     class="ActivityImage"
                                 />
                             </picture>
-                        </a>
+                        </div>
                         <h2 class="ActivityName">Île du Frioul</h2>
                     </article>
                     <article class="Activity" data-index="3">
-                        <a href="#" class="ActivityImageContainer">
+                        <div class="ActivityImageContainer">
                             <picture>
                                 <source
                                     srcset="
@@ -622,11 +630,11 @@
                                     class="ActivityImage"
                                 />
                             </picture>
-                        </a>
+                        </div>
                         <h2 class="ActivityName">Parc National des Calanques</h2>
                     </article>
                     <article class="Activity" data-index="4">
-                        <a href="#" class="ActivityImageContainer">
+                        <div class="ActivityImageContainer">
                             <picture>
                                 <source
                                     srcset="
@@ -652,11 +660,11 @@
                                     class="ActivityImage"
                                 />
                             </picture>
-                        </a>
+                        </div>
                         <h2 class="ActivityName">Notre-Dame-de-la-Garde</h2>
                     </article>
                     <article class="Activity" data-index="5">
-                        <a href="#" class="ActivityImageContainer">
+                        <div class="ActivityImageContainer">
                             <picture>
                                 <source
                                     srcset="
@@ -682,7 +690,7 @@
                                     class="ActivityImage"
                                 />
                             </picture>
-                        </a>
+                        </div>
                         <h2 class="ActivityName">Parc Longchamp</h2>
                     </article>
                 </div>

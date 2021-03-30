@@ -79,12 +79,12 @@ button {
     max-width: 2000px;
 }
 
-.ActivitySection {
+#ActivitySection {
     margin-bottom: 2.5rem;
 }
 
 @media screen and (max-width: 767px) {
-    .ActivitySection {
+    #ActivitySection {
         margin: 2rem;
     }
 }
@@ -119,8 +119,9 @@ button {
 .ActivityName {
     margin: 0;
     padding: 0 1rem 0.5rem;
-    font-size: 1rem;
+    font-size: min(1rem, 1.2vw);
     line-height: 2.5rem;
+    text-overflow: ellipsis;
 }
 
 @media screen and (max-width: 767px) {
@@ -137,6 +138,10 @@ button {
         height: 25vw;
         object-fit: cover;
         overflow: hidden;
+    }
+
+    .ActivityName {
+        font-size: 1rem;
     }
 }
 
@@ -212,13 +217,15 @@ button {
 .FooterSectionItem {
     list-style: none;
     padding: 0.5rem;
+    cursor: pointer;
 }
-.LodgeContainer {
+
+#LodgeContainer {
     display: grid;
 }
 
 @media screen and (min-width: 768px) {
-    .LodgeContainer {
+    #LodgeContainer {
         grid-template-columns: 17fr 8fr;
         grid-column-gap: 2.5em;
     }
@@ -241,7 +248,7 @@ button {
 }
 
 @media screen and (max-width: 767px) {
-    .LodgeContainer {
+    #LodgeContainer {
         display: flex;
         flex-direction: column;
     }
@@ -285,7 +292,7 @@ button {
 
 @media screen and (min-width: 768px) and (max-width: 991px) {
     .FamousLodgeFlexBox {
-        justify-content: space-between;
+        justify-content: space-evenly;
         padding: 1.5rem 0;
         height: calc(100% - 2rem);
     }
@@ -386,19 +393,15 @@ button {
 .FamousLodgeText {
     padding: 0.75rem;
     width: 80%;
-    display: grid;
-    grid-template-rows: 35% 45% 20%;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-between;
+    min-width: 90px;
 }
 
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 991px) {
     .FamousLodgeText {
-        grid-template-rows: 50% 30% 20%;
-    }
-}
-
-@media screen and (min-width: 768px) {
-    .FamousLodgeText {
-        grid-template-rows: 35% 45% 20%;
+        padding: 0.75rem 0.25rem;
     }
 }
 
@@ -415,6 +418,10 @@ button {
 .LodgeCostP {
     font-size: 0.875rem;
     margin: 0.5em 0 0 0;
+}
+
+.FamousLodgeText > .LodgeCostP {
+    flex-grow: 1;
 }
 
 @media screen and (max-width: 767px) {
@@ -511,8 +518,7 @@ footer {
     padding-top: 1.375rem;
 }
 
-.TabButton:hover,
-.TabButton:focus {
+.TabButton:hover {
     box-shadow: 0 0.5em 0.5em -0.6em var(--primary-alt);
     transform: translateY(-2px);
 }
@@ -569,6 +575,7 @@ footer {
     display: flex;
     padding-left: 0.3125rem;
     width: calc(100% - 6.5rem);
+    position: absolute;
 }
 
 .LocationButton {
@@ -608,8 +615,9 @@ footer {
     padding-left: 0.9rem;
     padding-right: 1.125rem;
     background-color: var(--primary);
-    border-top-right-radius: 1rem;
-    border-bottom-right-radius: 1rem;
+    border-radius: 1rem;
+    position: relative;
+    left: -8px;
 }
 
 .FilterContainer {
@@ -639,10 +647,34 @@ footer {
     border-width: 2px;
     border-color: var(--secondary);
     border-radius: 3rem;
-    margin-right: 1.375rem;
     padding-right: 1.375rem;
     word-break: keep-all;
     white-space: nowrap;
+}
+
+.Filter,
+.lodge,
+.famousLodge,
+.Activity {
+    cursor: pointer;
+}
+
+.Filter:hover,
+.lodge:hover,
+.famousLodge:hover,
+.Activity:hover {
+    box-shadow: 0px 0px 15px var(--primary);
+}
+
+.Filter:active,
+.lodge:active,
+.famousLodge:active,
+.Activity:active,
+.TabButton:active,
+.SubscribeButton:active {
+    background-color: var(--primary-light);
+    background-size: 100%;
+    transition: background 0s;
 }
 
 .FilterIcon {
@@ -676,19 +708,22 @@ footer {
 
     .TabButton {
         font-size: 1.25rem;
+        border-radius: 0;
+        border-bottom: solid 3px var(--secondary);
     }
 
     .TabButton[data-selected] {
-        border-bottom-style: solid;
+        border-bottom-color: var(--primary);
     }
 
     .SubscribeButton {
         grid-column: 12;
         color: var(--primary);
         transition: 0.25s;
-        padding-top: 1.375rem;
+        padding-top: 3rem;
         padding-right: 0.75rem;
         font-weight: bold;
+        font-size: 1.3rem;
         color: var(--primary);
     }
 
@@ -710,7 +745,7 @@ footer {
     }
 
     .Filter {
-        margin: 0;
+        margin: 0.5rem 0.5rem;
     }
 }
 
@@ -740,6 +775,6 @@ footer {
     }
 
     .Filter {
-        margin: 1.25rem 0;
+        margin: 1.25rem 0.5rem;
     }
 }
